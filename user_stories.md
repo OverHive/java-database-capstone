@@ -1,4 +1,4 @@
-## Admin User Stories’
+## Admin User Stories
 
 **Title:**
 _As a admin, I want be able to log in with my user name and password, so that I can manage the platform securely._
@@ -59,7 +59,7 @@ _As a admin, I want be able to run a stored procedure in MySQL CLI to get the nu
 
 - Requires doctor accounts creation
 
-## patient User Stories
+## Patient User Stories
 
 **Title:**
 _As a patient, I want be able to view a list of doctors without logging in to explore options before registering._
