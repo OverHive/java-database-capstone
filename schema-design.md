@@ -22,7 +22,7 @@
 - password: VARCHAR, Not Null
 - phone_number: VARCHAR
 - seniority: (0 = internship, 1 = junior, 2 = senior)
-- availability: (0 = unavailible, 1 = availible)
+- availability: (0 = unavailable, 1 = available)
 - next_appointment: DATETIME, Not Null
 - last_appointment: DATETIME, Not Null
 
