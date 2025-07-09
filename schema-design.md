@@ -2,30 +2,29 @@
 
 ### Table: Patients
 
-id: INT, Primary key, AUTO_INCREMENT
-name: VARCHAR, Not Null
-email: VARCHAR, Not Null
-password: VARCHAR, Not Null
-gender: VARCHAR
-age: INT, Not Null
-birthdate: DATETIME, Not Null
-phone_number: VARCHAR
-last_appointment: DATETIME, Not Null
-allergies: VARCHAR
-blood_type: VARCHAR
+- id: INT, Primary key, AUTO_INCREMENT
+- nme: VARCHAR, Not Null
+- email: VARCHAR, Not Null
+- password: VARCHAR, Not Null
+- gender: VARCHAR
+- age: INT, Not Null
+- birthdate: DATETIME, Not Null
+- phone_number: VARCHAR
+- last_appointment: DATETIME, Not Null
+- allergies: VARCHAR
+- blood_type: VARCHAR
 
 ### Table: Doctor
 
-id: INT, Primary key, AUTO_INCREMENT
-name: VARCHAR, Not Null
-email: VARCHAR, Not Null
-password: VARCHAR, Not Null
-phone_number: VARCHAR
-##For determine the type of appointments they can offer
-seniority: (0 = internship, 1 = junior, 2 = senior)
-availability: (0 = unavailible, 1 = availible)
-next_appointment: DATETIME, Not Null
-last_appointment: DATETIME, Not Null
+- id: INT, Primary key, AUTO_INCREMENT
+- name: VARCHAR, Not Null
+- email: VARCHAR, Not Null
+- password: VARCHAR, Not Null
+- phone_number: VARCHAR
+- seniority: (0 = internship, 1 = junior, 2 = senior)
+- availability: (0 = unavailible, 1 = availible)
+- next_appointment: DATETIME, Not Null
+- last_appointment: DATETIME, Not Null
 
 ### Table: appointments
 
@@ -42,10 +41,10 @@ last_appointment: DATETIME, Not Null
 
 ## Table: admins
 
-id: INT, Primary key, AUTO_INCREMENT
-name: VARCHAR, Not Null
-email: VARCHAR, Not Null
-password: VARCHAR, Not Null
+- id: INT, Primary key, AUTO_INCREMENT
+- name: VARCHAR, Not Null
+- email: VARCHAR, Not Null
+- password: VARCHAR, Not Null
 
 ## MongoDB Collection Design
 
