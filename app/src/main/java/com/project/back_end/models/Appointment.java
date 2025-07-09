@@ -20,15 +20,16 @@ public class Appointment {
 //    - Marks the class as a JPA entity, meaning it represents a table in the database.
 //    - Required for persistence frameworks (e.g., Hibernate) to map the class to a database table.
 
-@Id
-@GeneratedValue(strategy  = GenerationType.IDENTITY)
-private Long id;
 // 1. 'id' field:
 //    - Type: private Long
 //    - Description:
 //      - Represents the unique identifier for each appointment.
 //      - The @Id annotation marks it as the primary key.
 //      - The @GeneratedValue(strategy = GenerationType.IDENTITY) annotation auto-generates the ID value when a new record is inserted into the database.
+
+@Id
+@GeneratedValue(strategy  = GenerationType.IDENTITY)
+private Long id;
 
 // 2. 'doctor' field:
 //    - Type: private Doctor
