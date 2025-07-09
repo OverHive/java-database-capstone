@@ -84,7 +84,7 @@ private String phone;
 
 @NotNull(message = "Address cannot be null")
 @Size(max = 255)
-private String adress;
+private String address;
 
 
 // 7. Getters and Setters:
@@ -142,14 +142,14 @@ public void setPhone (String _phone)
 this.phone = _phone;
 } 
 
-public String getAdress()
+public String getaddress()
 {
-    return adress;
+    return address;
 }
 
-public void setAdress (String _address)
+public void setaddress (String _address)
 {
-this.adress = _address;
+this.address = _address;
 } 
 
 }
