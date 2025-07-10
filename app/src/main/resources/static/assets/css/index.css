@@ -1,4 +1,91 @@
 /* this is the style sheet file for index.htlm  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 48px;
+  margin-bottom: 50px;
+  color: #003e3e;
+  font-weight: bold;
+  font-family: 'Alegreya', 'Roboto', sans-serif;
+}
+
+.main-content {
+
+  flex-grow: 1;
+  height: 70%;
+  padding: 40px;
+  background-color: #A62B1F;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../images/defineRole/index.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+button {
+  background-color: #015c5d;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 200px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #A62B1F;
+}
+
+
+.modal {
+  position: relative;
+  background-color: rgb(234, 164, 78)
+}
+
+.modal:hover {
+  border: 1%;
+  border-color: yellowgreen;
+}
+
+#close {
+  background-color: rgb(210, 242, 200)
+}
+
+#close:hover {
+  background-color: rgb(135, 238, 104)
+}
+
+.dashboard-btn:hover {
+  background-color: #003e3e;
+}
+
+.footer {
+  display: flexbox;
+}
+
+
 
 /* 
 **Global Reset (`*`)**

@@ -1,3 +1,71 @@
+import deleteDoctor from "../services/doctorServices.js"
+
+export function createDocotrCard(doctor) {
+  const card = document.createElement("div");
+  card.classList.add("doctor-card");
+
+  const role = localStorage.getItem("userRole");
+
+  const infoDiv = document.createElement("div");
+  infoDiv.classList.add("doctor-info");
+
+  const name = document.createElement("h3");
+  name.textContent = doctor.name;
+
+  const specialization = document.createElement("h3");
+  specialization.textContent = doctor.specialization;
+
+  const email = document.createElement("h3");
+  email.textContent = doctor.email;
+
+  const availability = document.createElement("h3");
+  doctor.availability.forEach(element => {
+    availability.textContent += element;
+  });
+
+  infoDiv.appendChild(name);
+  infoDiv.appendChild(specialization);
+  infoDiv.appendChild(email);
+  infoDiv.appendChild(availability);
+
+  const actionsDiv = document.createElement("div");
+  actionsDiv.classList.add("card-actions");
+
+  if (role === "admin") {
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Delete";
+    removeBtn.addEventListener("click", async () => {
+      if (this.textContent === "Delete") {
+        localStorage.getItem("token");
+        if (deleteDoctor()) {
+          document.removeChild(card);
+        }
+      }
+    });
+  }
+  else if (role === "patient") {
+    const bookNow = document.createElement("button");
+    bookNow.textContent = "Book Now";
+    bookNow.addEventListener("click", () => {
+      alert("Patient needs to login first.");
+    });
+  }
+  else if (role === "loggedPatient") {
+    const bookNow = document.createElement("button");
+    bookNow.textContent = "Book Now";
+    bookNow.addEventListener("click", async (e) => {
+      const token = localStorage.getItem("token");
+      const patientData = await getPatientData(token);
+      showBookingOverlay(e, doctor, patientData);
+    });
+  }
+
+  card.appendChild(infoDiv);
+  card.appendChild(actionsDiv);
+  return card;
+
+}
+
 /*
 Import the overlay function for booking appointments from loggedPatient.js
 

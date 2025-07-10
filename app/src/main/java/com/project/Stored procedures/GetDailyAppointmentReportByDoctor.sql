@@ -24,4 +24,4 @@ END$$
 
 DELIMITER ;
 
-//CALL GetDailyAppointmentReportByDoctor('2025-04-15');
+-- CALL GetDailyAppointmentReportByDoctor('2025-04-15');
